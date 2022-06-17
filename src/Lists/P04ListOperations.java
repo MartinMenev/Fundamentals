@@ -24,7 +24,7 @@ public class P04ListOperations {
                 case "Insert":
                     int index = Integer.parseInt(command[2]);
                     int value = Integer.parseInt(command[1]);
-                    if (index < items.size()) {
+                    if (index >= 0 && index < items.size()) {
                         items.add(index, value);
                     } else {
                         System.out.println("Invalid index");
@@ -32,7 +32,7 @@ public class P04ListOperations {
                     break;
                 case "Remove":
                     index = Integer.parseInt(command[1]);
-                    if (index < items.size()) {
+                    if (index >= 0 && index < items.size()) {
                         items.remove(index);
                     } else {
                         System.out.println("Invalid index");
