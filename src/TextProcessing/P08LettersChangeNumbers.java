@@ -11,10 +11,10 @@ public class P08LettersChangeNumbers {
         for (int i = 0; i < input.length; i++) {
             char first = input[i].charAt(0);
             char last = input [i].charAt(input[i].length()-1);
-            double num = Integer.parseInt(input[i].substring(1, input[i].length() - 1));
+            double num = Double.parseDouble(input[i].substring(1, input[i].length() - 1));
 
             if (isUppercase(first)) {
-                num /= (first-64);
+                num /= (first - 64);
             } else {
                 num *= (first - 96);
             }
